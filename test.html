@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <link rel="stylesheet" href="stylehome.css">
+  <link rel="stylesheet" href="styleproducts.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--NAVIGATION BAR-->
+<div class="topnav" id="myTopnav">
+  <a href="index.html">
+    <!--<img src="images/logo2.jpg"></a>-->
+    <a href="index.html" class="active">HOME</a>
+    <a href="1services.html">SERVICES</a>
+    <a href="2accessories.html">ACCESSORIES</a>
+    <a href="3electricals.html">ELECTRONICS</a>
+    <a href="4stationery.html">STATIONERY</a>
+    <a href="5software.html">SOFTWARE</a>
+    <a href="6phones.html">PHONES</a>
+    <a href="7photography.html">PHOTOGRAPHY</a>
+    <a href="8moviesps.html">MOVIES & PS</a>
+    <a href="9comptraining.html">COMPUTER TRAINING</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<!--BANNER-->
+<div class="hero-section">
+  <div class="hero-section-text">
+    <marquee> <h1>QUEENSTAR COMPUTER SERVICES   </h1></marquee>
+    <h2 style="color: gold;">Kasuku</h2>
+    <p>An ICT Centre aimed at meeting all your Computing & Technological Needs</p>
+  </div>
+</div>
+<!--PRODUCTS-->
+<!-- MAIN (Center website) -->
+<div class="main">
+    <!--<p style="color:red; font-size:25px;"><b>OUR PRODUCTS & SERVICES</b></p>-->
+    <div class="heading2">
+        <h2>OUR SERVICES </h2>
+    </div> 
+    <!----<div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> SHOW ALL</button>
+      <button class="btn" onclick="filterSelection('online')">  SERVICES</button>
+      
+    </div> -->
+    
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+          
+            <!-- BINDING -->
+
+   <div class="column online">
+    <div class="content">
+      <h2> BINDING</h2>
+        <img src="binding.jpg" alt="#" style="width:100%">
+        <h4>Spiral Binding</h4> 
+    </div>
+    </div>
+    <div class="column online">
+      <div class="content">
+        <h2> BINDING</h2>
+          <img src="tapebinding.jpg" alt="#" style="width:100%">
+          <h4>Tape Binding</h4> 
+      </div>
+      </div>
+    <div class="column online">
+      <div class="content">
+        <h2> BINDING</h2>
+          <img src="spiral.jpg" alt="#" style="width:100%">
+          <h4> Spirals</h4> 
+      </div>
+      </div>
+
+ 
+    <!-- END GRID -->
+    </div>
+    
+<!---Whatsapp chat-->
+<div style="text-align:center;">
+  <h3 style="color:red;">Kindly contact us on WhatsApp </h3>
+  <a href="https://wa.me/0729497356">
+    <img src="whatsapp.png" alt="#" style="width:8%">
+  </a> 
+</div>
+    <!-- END MAIN -->
+    </div>
+    
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+      <div class="heading5">
+            <h5>“Welcome and Thank You for Trading with Us.”</h5>
+      </div>
+    <div class="heading2">
+      <h2>LOCATE US </h2>
+  </div> 
+    <!--- GOOGLE MAP-->
+  
+    <div class="map-responsive">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.7557719110341!2d36.29452581199275!3d-0.710517717504552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182915750b04b79b%3A0xdfec6ecb65cb2f6c!2sKasarani%20shopping%20center!5e0!3m2!1sen!2ske!4v1663566954002!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+<!--FOOTER-->
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+      <!--<img src="images/logo2.jpg"> <br> -->
+    <h3>Charlo <span>Tech Hub</span></h3>
+
+    <p class="footer-links">
+      <a href="index.html">Home</a>
+      |
+      <a href="index.html">Our Services</a>
+      |
+      <a href="https://wa.me/254071xt=">Contact Us</a>
+
+    </p>
+
+    <p class="footer-company-name">© 2022 Charlo Tech Hub</p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+        <p><span> Scolar Gorofa Building,
+         First Floor, Rm xxx</span>
+        </p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>xxx</p>
+    </div>
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>xxx</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="#">support@xxx.com</a></p>
+    </div>
+    
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>About Us</span>
+      We are an ICT oriented enterprise offering a variety of services such as printing, online/cyber services, photocopu, lamination, binding, photography, phone repair, computer & electrical accessories, movies, PS games, software installation, and Computer Training. </p>
+    
+  </div>
+</footer>
+
+</body>
+</html>
